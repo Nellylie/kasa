@@ -10,7 +10,7 @@ function App () {
     async function fetchLocations () {
       setDataLoading(true);
       try {
-        const response = await fetch('https://nellylie.github.io/kasa/build/data/logements.json');
+        const response = await fetch('https://nellylie.github.io/kasa/data/logements.json');
         const locations = await response.json();
         setLocations(locations);
       } catch (err) {
