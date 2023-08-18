@@ -1,0 +1,12 @@
+.location-list {
+    width:90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    justify-content: center;
+    row-gap: 70px;
+    background-color: #F6F6F6;
+    padding: 50px 50px;
+    margin: 43px auto;
+    border-radius: 25px;
+}
