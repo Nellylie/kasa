@@ -1,0 +1,23 @@
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: #FF6060;
+    font-size: 1.5rem;
+    column-gap: 30px;
+  }
+
+  .navbar ul :visited{
+    color: #FF6060;
+
+  }
+  
+  .button-link {
+    text-align: center;
+    text-decoration: none;
+    &active {
+      text-decoration : underline;
+    }
+  }

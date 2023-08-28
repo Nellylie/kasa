@@ -5,6 +5,7 @@ import Home from './pages/home/Home';
 import LocationSelected from './pages/locationselected/LocationSelected';
 import Error from './pages/error/Error';
 import About from './pages/about/About';
+import Header from './components/header/Header';
 
 function App () {
   const [locations, setLocations] = useState([]);
@@ -20,6 +21,7 @@ function App () {
   console.log(error);
 
   return <>
+  <Header/>
  <Routes>
           <Route path="/" element= {<Home locations = {locations}/>}/>
           <Route path="/about" element= {<About/>}/>
