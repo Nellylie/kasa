@@ -12,15 +12,16 @@
     "react-scripts": "5.0.1",
     "sass": "^1.66.0",
     "web-vitals": "^2.1.4",
-    "homepage": "http://nellylie.github.io/kasa/"
+    "homepage": "http://nellylie.github.io/kasa"
   },
   "scripts": {
+    "predeploy" : "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "eject": "react-scripts eject"
+  
   },
   "eslintConfig": {
     "extends": [
