@@ -23,7 +23,7 @@ function App () {
   return <>
   <Header/>
  <Routes>
-          <Route path="/" element= {<Home locations = {locations}/>}/>
+          <Route path="/" element= {locations && <Home locations = {locations}/>}/>
           <Route path="/about" element= {<About/>}/>
           <Route path="/error" element= {<Error/>}/>
           <Route path="/*" element= {<Error/>}/>

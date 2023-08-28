@@ -1,10 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import logoDark from '../../media/logo-dark.png';
 
 function Footer () {
   return <footer className='footer'>
     <NavLink to="/">
-          <img src={logoDark} alt="Logo de Kasa" />
+          <img src={process.env.PUBLIC_URL + '/media/logo-dark.png'} alt="Logo de Kasa" />
         </NavLink>
         <p>2023 Kasa. Tous droits réservés</p>
     </footer>;
