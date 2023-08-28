@@ -6,6 +6,7 @@ import LocationSelected from './pages/locationselected/LocationSelected';
 import Error from './pages/error/Error';
 import About from './pages/about/About';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 function App () {
   const [locations, setLocations] = useState([]);
@@ -23,12 +24,13 @@ function App () {
   return <>
   <Header/>
  <Routes>
-          <Route path="/" element= {locations ? <Home locations = {locations}/> : console.log(locations)}/>
+          <Route path="/" element= {locations && <Home locations = {locations}/>}/>
           <Route path="/about" element= {<About/>}/>
           <Route path="/error" element= {<Error/>}/>
           <Route path="/*" element= {<Error/>}/>
           <Route path="/home/:id" element={<LocationSelected />} />
         </Routes>;
+  <Footer/>
   </>;
 }
 
