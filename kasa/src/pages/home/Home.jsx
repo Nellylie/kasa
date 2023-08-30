@@ -9,6 +9,7 @@ function Home ({ locations }) {
   useEffect(() => {
     axios.get('data/logements.json').then((res) => setData(res.data)); // requète AXIOS ici également pour prochaine utilisation API
   }, []);
+
   return <>
   <Banner imgSrc={imgBannerHome}/>
   <div className='location-list'>
