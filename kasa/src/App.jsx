@@ -12,7 +12,7 @@ function App () {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://nellylie.github.io/kasa/data/logements.json').then((res) => { if (res.ok) { return res.json(); } throw res; }).then((set) => {
+    fetch(process.env.PUBLIC_URL + 'data/logements.json').then((res) => { if (res.ok) { return res.json(); } throw res; }).then((set) => {
       setLocations(set);
     }).catch((err) => {
       console.log(err); setError(true);
