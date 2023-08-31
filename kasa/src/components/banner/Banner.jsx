@@ -1,7 +1,7 @@
-function Banner ({ imgSrc }) {
+function Banner ({ imgSrc, textContent }) {
   return <div className='banner'>
               <div className='slogan'>
-                  <p>Chez vous, partout et ailleurs</p>
+                  <p>{ textContent }</p>
               </div>
               <img className= 'img-banner'
               src = { imgSrc }>
