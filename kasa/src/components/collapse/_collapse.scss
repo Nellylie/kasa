@@ -1,0 +1,55 @@
+
+.collapse-module {
+    position: relative;
+    text-align: center;
+    width:100%;
+    margin : 40px auto;
+    
+  }
+  
+  .collapse-trigger {
+    width: 100% ;
+    background-color: #FF6060;
+    border: unset;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #FFFFFF;
+    height:47px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .collapse-open{
+    border-radius: 0 0 20px 20px;
+    padding-left: 20px;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom:10px;
+    overflow: hidden;
+    min-height: 50px;
+    height: auto; 
+    text-align: left;
+    background-color: #F6F6F6;
+    font-weight: 400;
+    font-size: 24px;
+    color:#FF6060;
+  }
+
+.collapse-open li{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin:0;
+  list-style-type: none;
+}
+
+.collapse-open p{
+  line-height: 1.5rem;
+  margin:10px;
+  font-size: 1rem;
+}
