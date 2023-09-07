@@ -2,24 +2,19 @@ import LocationCards from '../../components/locationcards/LocationCards';
 import Footer from '../../components/footer/Footer';
 import Banner from '../../components/banner/Banner';
 import imgBannerHome from '../../media/image-banner-home.jpg';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 
-function Home ({ locations }) {
+function Home ({ data }) {
   const textContent = 'Chez vous, partout et ailleurs';
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios.get('data/logements.json').then((res) => setData(res.data)); // requète AXIOS ici également pour prochaine utilisation API
-  }, []);
 
-  return <>
-  <Banner imgSrc={imgBannerHome} textContent = {textContent}/>
+  console.log('DATATAT', data);
+
+  return (<div><Banner imgSrc={imgBannerHome} textContent = {textContent}/>
   <div className='location-list'>
-  {data.map((oneLocation) => (<LocationCards className = "card-container"
-                key = {oneLocation.id} id = {oneLocation.id} title = {oneLocation.title} cover = {oneLocation.cover}
+  {data && data.map((oneLocation, index) => (<LocationCards className = "card-container"
+                key = {oneLocation.id + index} id = {oneLocation.id} title = {oneLocation.title} cover = {oneLocation.cover}
             />))}
   </div>
-  <Footer/></>;
+  <Footer/></div>);
 }
 
 export default Home;
