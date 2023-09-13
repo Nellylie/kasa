@@ -1,0 +1,50 @@
+.gallery {
+  position: relative;
+  height: auto;
+  align-items: center;
+  display: flex;
+}
+
+.gallery img {
+  height: 415px;
+  object-fit: cover;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.navigate .number {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.navigate .chevron-left {
+  top: 0;
+  padding-left: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 4rem;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: absolute;
+}
+
+.navigate .chevron-right {
+  font-size: 4rem;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  height: 100%;
+}

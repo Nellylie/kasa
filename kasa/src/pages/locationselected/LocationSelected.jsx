@@ -1,24 +1,30 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-// import Gallery from '../../components/gallery/Gallery';
+import Gallery from '../../components/gallery/Gallery';
 import Error from '../../pages/error/Error';
 import Collapse from '../../components/collapse/Collapse';
 
 function LocationSelected ({ data }) {
   const range = [1, 2, 3, 4, 5];
   const { locationId } = useParams();
-  const [dataSelected, setDataSelected] = useState([]);
-  console.log('datahom', data, 'dataselehome', dataSelected, 'usepara', locationId);
-
+  const [dataSelected, setDataSelected] = useState(null);
+  const [selection, setSelection] = useState(false);
   useEffect(() => {
-    (setDataSelected(data?.find((accomodation) => accomodation?.id === locationId)));
+    const select = data?.find((accomodation) => accomodation.id === locationId);
+    if (!select) {
+      setSelection(false);
+    } else {
+      setSelection(true);
+      setDataSelected(select);
+      ;
+    }
   },
-  [locationId, dataSelected, data, setDataSelected]);
+  [locationId, dataSelected, data]);
 
-  return <div>{locationId
+  return <div>{selection
     ? (
     <main className = "main-accomodation">
-        {/* <Gallery pictures = { dataSelected?.pictures }/> */}
+        <Gallery pictures = { dataSelected?.pictures }/>
         <div className="head-accomodation">
         <div className = "contain-accomodation">
           <div className ="title">{dataSelected?.title}</div>
