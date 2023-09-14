@@ -11,6 +11,13 @@
   border-radius: 25px;
   width: 100%;
 }
+.navigate{
+    align-items: center;
+    display: flex;
+    position: absolute;
+    height: 415px;
+    width: 100%;
+}
 
 .navigate .number {
   position: absolute;
@@ -33,6 +40,7 @@
   display: flex;
   height: 100%;
   position: absolute;
+  z-index: 5;
 }
 
 .navigate .chevron-right {
