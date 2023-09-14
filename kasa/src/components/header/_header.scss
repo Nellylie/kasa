@@ -1,9 +1,27 @@
 .header-principal {
-    align-items: center;
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Montserrat', sans-serif;
-    width: 80%;
-    margin: 0 auto;
+  align-items: center;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+
+  @include mobile {
+    width: 90%;
+    padding: 50px 0;
   }
+  @include tablet {
+    padding: 50px 0;
+    width: 90%;
+  }
+}
+
+.header-principal img {
+  @include mobile {
+    width: 80%;
+  }
+  @include tablet {
+    width: 90%;
+  }
+}

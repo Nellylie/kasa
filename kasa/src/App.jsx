@@ -12,19 +12,17 @@ function App () {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get('data/logements.json').then((res) => setData(res.data)); // requète AXIOS ici également pour prochaine utilisation API
+    axios.get('data/logements.json').then((res) => setData(res.data));
   }, []);
 
   return <>
-  <Header/>
-
- <Routes>
-          <Route path="/" element={<Home data = {data }/>}/>
-          <Route path="/about" element= {<About/>}/>
-          <Route path="/accomodation/:locationId" element= {<LocationSelected data = { data }/>}/>
-          <Route path="/*" element= {<Error/>}/>
-
-        </Routes>;
+    <Header />
+    <Routes>
+      <Route path="/" element={<Home data={data} />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/accomodation/:locationId" element={<LocationSelected data={data} />} />
+      <Route path="/*" element={<Error />} />
+    </Routes>
   </>;
 }
 

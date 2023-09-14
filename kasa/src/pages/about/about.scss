@@ -1,9 +1,16 @@
 .main-about {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 .collapses-modules {
-    margin: 40px auto;
-    width: 70%;
+  margin: 40px auto;
+  width: 70%;
+
+  @include mobile {
+    width: 90%;
+  }
+  @include tablet {
+    width: 90%;
+  }
 }

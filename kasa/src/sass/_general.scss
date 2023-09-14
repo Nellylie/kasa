@@ -1,0 +1,23 @@
+:root {
+  font-size: 20px;
+
+  @include mobile {
+    font-size: 15px;
+  }
+  @include tablet {
+    font-size: 17px;
+  }
+}
+
+html {
+  margin: auto;
+  padding: 0;
+}
+body {
+  min-width: 375px;
+  width: 100%;
+  font-size: 3rem;
+  margin: auto;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}

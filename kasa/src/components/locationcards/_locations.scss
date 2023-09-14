@@ -1,50 +1,65 @@
 .location-figure {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 340px;
-    max-height: 340px;
-    margin:auto;
-    background: linear-gradient(#e66465, #9198e5);    border-radius: 10px;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 340px;
+  max-height: 340px;
+  margin: auto;
+  background: linear-gradient(#e66465, #9198e5);
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include mobile {
+    width: 90%;
+  }
+  @include tablet {
+    width: 90%;
+  }
 }
-.card-link{
-    display: block;
-    box-sizing: border-box;
-    margin:auto;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
+.card-link {
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
 .location-filter {
-    position:absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height:100%;
-    background: linear-gradient(rgba(0, 0, 0, 0), #000000a5,);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), #000000a5);
 }
-.location-filter:hover{
-    background: linear-gradient(rgba(0, 0, 0, 0), #ff6060a5,);
+.location-filter:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0), #ff6060a5);
 }
 
 .location-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .location-title {
-    position:absolute;
-    box-sizing: border-box;
-    width: 70%;
-    height:fit-content;
-    bottom:0px;
-    padding: 0 20px 20px;
-    font-size: 18px;
-    color: white;  
-    z-index: 5;
-    font-family: Montserrat;
-    font-weight: 500;
-    line-height: 26px;
+  position: absolute;
+  box-sizing: border-box;
+  width: 70%;
+  height: fit-content;
+  bottom: 0px;
+  padding: 0 20px 20px;
+  font-size: 18px;
+  color: white;
+  z-index: 5;
+  font-family: Montserrat;
+  font-weight: 500;
+  line-height: 26px;
+
+  @include mobile {
+    width: 150px;
+  }
+  @include tablet {
+    width: 150px;
+  }
 }
