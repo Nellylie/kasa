@@ -1,5 +1,4 @@
 import LocationCards from '../../components/locationcards/LocationCards';
-import Footer from '../../components/footer/Footer';
 import Banner from '../../components/banner/Banner';
 import imgBannerHome from '../../media/image-banner-home.jpg';
 
@@ -14,7 +13,7 @@ function Home ({ data }) {
                 key = {oneLocation.id + index} id = {oneLocation.id} title = {oneLocation.title} cover = {oneLocation.cover}
             />))}
   </div>
-  <Footer/></div>);
+</div>);
 }
 
 export default Home;

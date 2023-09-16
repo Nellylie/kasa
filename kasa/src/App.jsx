@@ -7,6 +7,7 @@ import Header from './components/header/Header';
 import LocationSelected from './pages/locationselected/LocationSelected';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Footer from './components/footer/Footer';
 
 function App () {
   const [data, setData] = useState(null);
@@ -23,6 +24,7 @@ function App () {
       <Route path="/accomodation/:locationId" element={<LocationSelected data={data} />} />
       <Route path="/*" element={<Error />} />
     </Routes>
+  <Footer/>
   </>;
 }
 
