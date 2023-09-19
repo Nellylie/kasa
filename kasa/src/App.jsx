@@ -10,12 +10,15 @@ import axios from 'axios';
 import Footer from './components/footer/Footer';
 
 function App () {
+  // Déclaration d'un state pour stocker les données du fichier json
   const [data, setData] = useState(null);
 
+  // Récupération des données du fichier json avec axios après le premier rendu du composant "App"
   useEffect(() => {
     axios.get('data/logements.json').then((res) => setData(res.data));
   }, []);
-
+  // Rendu du composant "App" et gestion des routes avec react-router-dom
+  // affichage du header et du footer sur toutes les pages
   return <>
     <Header />
     <Routes>

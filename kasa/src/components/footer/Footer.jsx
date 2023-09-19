@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import logoDark from '../../media/logo-dark.png';
-
+// affichage du pied de page
 function Footer () {
   return <footer className='footer'>
     <NavLink to="/">

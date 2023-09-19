@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Routers } from 'react-router-dom';
-
+import { HashRouter as Routers } from 'react-router-dom';
+// selectionne l'élément racine de l'application
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // React.strictMode sécurise pendant le développement de l'application en affichant des avertissements supplémentaires
   <React.StrictMode>
   <Routers>
     <App />
