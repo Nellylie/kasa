@@ -7,7 +7,7 @@ function About () {
   /* "dataAbout" est un tableau d'objets qui contient les données
 pour le composant "Collapse" communiquées dans les props "title" et "description" */
   return <main className='about-section'>
-        <Banner imgSrc ={bannerAbout} text="" />
+        <div className="banner-container"><Banner imgSrc ={bannerAbout} text="" /></div>
         <div className="collapses-modules">
         {dataAbout.map((content) => (
             <Collapse key={content.title} title={content.title} description={content.description}/>

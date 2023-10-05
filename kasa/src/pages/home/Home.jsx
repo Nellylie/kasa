@@ -7,7 +7,7 @@ function Home ({ data }) {
 
   console.log('DATATAT', data);
   // "data" est un tableau qui contient les données pour le composant "LocationCards" communiquées dans les props "id", "title" et "cover"
-  return (<div><Banner imgSrc={imgBannerHome} textContent = {textContent}/>
+  return (<div className="main-container"><Banner imgSrc={imgBannerHome} textContent = {textContent}/>
   <div className='location-list'>
   {data && data.map((oneLocation, index) => (<LocationCards className = "card-container"
                 key = {oneLocation.id + index} id = {oneLocation.id} title = {oneLocation.title} cover = {oneLocation.cover}
