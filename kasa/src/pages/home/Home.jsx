@@ -5,7 +5,6 @@ import imgBannerHome from '../../media/image-banner-home.jpg';
 function Home ({ data }) {
   const textContent = 'Chez vous, partout et ailleurs';
 
-  console.log('DATATAT', data);
   // "data" est un tableau qui contient les données pour le composant "LocationCards" communiquées dans les props "id", "title" et "cover"
   return (<div className="main-container"><Banner imgSrc={imgBannerHome} textContent = {textContent}/>
   <div className='location-list'>
